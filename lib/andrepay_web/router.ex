@@ -8,7 +8,7 @@ defmodule AndrepayWeb.Router do
   scope "/api", AndrepayWeb do
     pipe_through :api
 
-    get "/", WelcomeController, :index
+    get "/:filename", WelcomeController, :index
   end
 
   # Enables LiveDashboard only for development
