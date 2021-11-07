@@ -1,9 +1,5 @@
 defmodule Andrepay do
-  @moduledoc """
-  Andrepay keeps the contexts that define your domain
-  and business logic.
+  alias Andrepay.Users.Create, as: UserCreate
 
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
+  defdelegate create_user(parans), to: UserCreate, as: :call
 end
